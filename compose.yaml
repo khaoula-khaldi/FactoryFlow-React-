@@ -1,0 +1,41 @@
+
+services:
+
+  backend:
+    build:
+      context: ./backend/FactoryFlow
+      dockerfile: Dockerfile
+    container_name: factoryflow-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/FactoryFlow/.env
+    volumes:
+      - ./backend/FactoryFlow:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./frontEnd
+      dockerfile: Dockerfile
+    container_name: factoryflow-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontEnd:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  mongodb:
+    image: mongo:8
+    container_name: factoryflow-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
