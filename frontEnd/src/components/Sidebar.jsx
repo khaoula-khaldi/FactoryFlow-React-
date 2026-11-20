@@ -25,6 +25,16 @@ function Sidebar() {
               Produits
             </NavLink >
           </li>
+          <li>
+            <NavLink  to="/addUser" className="block px-4 py-3 rounded-lg text-gray-300 hover:bg-slate-700 hover:text-white transition-colors">
+              Ajouter un utilisateur 
+            </NavLink >
+          </li>
+          <li>
+            <NavLink  to="/addMatiere" className="block px-4 py-3 rounded-lg text-gray-300 hover:bg-slate-700 hover:text-white transition-colors">
+              Ajouter un Matière 
+            </NavLink >
+          </li>
         </ul>
       </nav>
     </aside>
