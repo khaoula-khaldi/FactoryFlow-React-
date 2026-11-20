@@ -1,8 +1,4 @@
-function Produits(){
-    return (
-        <>
-            <p>Produits</p>
-        </>
-    )
+function produit(){
+    return <><h2>hhhhhhhhhhhhhhhhhhhhh</h2></>
 }
-export default Produits
+export default produit 

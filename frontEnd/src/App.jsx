@@ -7,6 +7,7 @@ import Produits from './pages/Produits';
 import AddUser from './pages/AddUser';
 import AddMatiere from './pages/AddMatiere'
 import UpdateMatiere from './pages/UpdateMatiere';
+import AddProduit from './pages/AddProduits'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="addUser" element={<AddUser/>}/>
           <Route path="addMatiere" element={<AddMatiere/>}/>
           <Route path="/updateMatiere/:id" element={<UpdateMatiere />}/>
+          <Route path="/AddProduit" element={<AddProduit />}/>
         </Route>
       </Routes>
       

@@ -35,6 +35,11 @@ function Sidebar() {
               Ajouter un Matière 
             </NavLink >
           </li>
+          <li>
+            <NavLink  to="/AddProduit" className="block px-4 py-3 rounded-lg text-gray-300 hover:bg-slate-700 hover:text-white transition-colors">
+              Ajouter un produit 
+            </NavLink >
+          </li>
         </ul>
       </nav>
     </aside>
